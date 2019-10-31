@@ -26,7 +26,7 @@ public class SecurityConfiguration extends
     @Override
     protected void configure(AuthenticationManagerBuilder auth)
         throws Exception{
-        auth.inMemoryAuthentication().withUser("user")
-                .password(passwordEncoder().encode("password")).authorities("USER");
+        auth.inMemoryAuthentication().withUser("TestUsername")
+                .password(passwordEncoder().encode("Test!Password")).authorities("USER");
     }
 }
